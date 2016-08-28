@@ -14,11 +14,11 @@
 	
 	<hr color="blue">
 	
-	<a href="/pr01/front/?cmd=js">중서 controller</a>
-	<a href="/pr01/front/?cmd=jh">요한 controller</a>
-	<a href="/pr01/front/?cmd=dh">도형 controller</a>
-	<a href="/pr01/front/?cmd=sy">선영 controller</a>
-	<a href="/pr01/front/?cmd=sh">선하 controller</a>
+	<a href="/pr01/front/?cmd=js">중서</a>&nbsp;
+	<a href="/pr01/front/?cmd=jh">요한</a>&nbsp;
+	<a href="/pr01/front/?cmd=dh">도형</a>&nbsp;
+	<a href="/pr01/front/?cmd=sy">선영</a>&nbsp;
+	<a href="/pr01/front/?cmd=sh">선하</a>&nbsp;
 	
 
 </div>

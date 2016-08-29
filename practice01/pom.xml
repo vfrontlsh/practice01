@@ -15,6 +15,29 @@
 	</properties>
 	<dependencies>
 	
+<!-- dh: jquery 추가 08.29 -->
+	<dependency>
+   <groupId>org.webjars</groupId>
+   <artifactId>jquery</artifactId>
+   <version>2.1.4</version>
+	</dependency>
+	
+<!-- dh: json용 jackson lib 08.29 -->
+	<dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.4.4</version>
+	</dependency>
+	
+<!-- dh: email보내기 연습용 08.29 -->
+<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+<dependency>
+    <groupId>javax.mail</groupId>
+    <artifactId>mail</artifactId>
+    <version>1.4.7</version>
+</dependency>
+
+
 	
 	<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
 <dependency>
@@ -22,6 +45,8 @@
     <artifactId>json-simple</artifactId>
     <version>1.1.1</version>
 </dependency>
+
+
 	
 	
 	<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->

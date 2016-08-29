@@ -5,4 +5,9 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 		
+	<!-- dh: jdbc context 등록 08.29 -->
+		<import resource="classpath:context_config/jdbc-context.xml"/>
+	
+	<!-- dh: 파일업로드용 multipart resolver 등록 -->	
+		 <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
 </beans>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+	<context:property-placeholder location="classpath:/context_config/jdbc.properties"/>
+	<bean id="dataSource" 
+		class="org.apache.commons.dbcp.BasicDataSource" 
+		p:driverClassName="${jdbc.driverClassName}"
+		p:url="${jdbc.url}"
+		p:username="${jdbc.username}"
+		p:password="${jdbc.password}"
+		p:maxActive="${jdbc.maxActive}"
+		p:maxIdle="${jdbc.maxIdle}"
+		p:maxWait="${jdbc.maxWait}"
+		p:defaultAutoCommit="false"
+	/>
+	
+	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="configLocation" value="classpath:/context_config/mybatis-config.xml"/>
+		<property name="typeAliasesPackage" value="vfront.github.pr01.bean"/>
+		<property name="mapperLocations">
+			<array>
+				<value>classpath:/mybatisMappers/*-mapper.xml</value>
+			</array>
+		</property>
+	</bean>
+<!-- 	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean" -->
+<!-- 		p:dataSource-ref="dataSource" -->
+<!-- 		p:configLocation="classpath:/context_config/mybatis-config.xml"		 -->
+<!-- 		p:mapperLocations="classpath:/mybatisMappers/*-mapper.xml"/> -->
+	<!-- MyBatis config의 경로와 mapper의 경로 -->
+	
+	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate" 
+		c:sqlSessionFactory-ref="sqlSessionFactoryBean"	
+	/>
+	<bean id="tx" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+		p:dataSource-ref="dataSource"
+	/>
+
+</beans>

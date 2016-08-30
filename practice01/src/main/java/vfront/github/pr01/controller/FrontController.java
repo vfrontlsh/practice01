@@ -37,7 +37,7 @@ public class FrontController {
 			
 		}else if(cmd.equals("dh")){
 			
-			mav.setViewName("redirect:/dh/");
+			mav.setViewName("forward:/dh/");
 			
 		}else if(cmd.equals("sy")){
 			

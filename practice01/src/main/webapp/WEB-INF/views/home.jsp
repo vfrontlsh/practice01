@@ -4,6 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- css 파일 local -->
+<link rel="stylesheet" href="/pr01/resources/css/dhcss.css">
+
+<!-- maven으로 가져온 jquery-->
+<script src="<c:url value="/webjars/jquery/3.1.0/jquery.min.js"/>"></script>
+
+<!-- src>main>webapp>resources>js_files>login.js 등록하기-->
+<script type="text/javascript" src="/pr01/resources/js_files/dh.js" defer></script>
+
+
 <title>Insert title here</title>
 </head>
 <body>

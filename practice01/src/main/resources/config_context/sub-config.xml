@@ -34,6 +34,7 @@
 		<property name="mapperLocations">
 			<array>
 				<value>classpath:/mappers/js_mapper.xml</value>
+				<value>classpath:/mappers/jh_mapper.xml</value>
 			</array>
 		</property>
 		

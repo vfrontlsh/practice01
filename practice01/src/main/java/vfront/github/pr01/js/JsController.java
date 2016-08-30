@@ -1,5 +1,8 @@
 package vfront.github.pr01.js;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,4 +44,24 @@ public class JsController {
 		return msg;
 	}
 	
+	@RequestMapping("/join")
+	public ModelAndView join(HttpServletRequest request){
+		
+		String msg = service.join(request);
+		ModelAndView mav = new ModelAndView("forward:/js/");
+		mav.addObject("msg", msg);
+		
+		return mav;
+	}
+	
+	@RequestMapping("/tryLogin")
+	public ModelAndView tryLogin(HttpServletRequest request, HttpSession session){
+		
+		String msg = service.tryLogin(request, session);
+		ModelAndView mav = new ModelAndView("forward:/js/");
+		mav.addObject("msg", msg);
+		
+		return mav;
+		
+	}
 }

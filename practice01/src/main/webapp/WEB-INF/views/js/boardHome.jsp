@@ -34,7 +34,7 @@
 	<br>
 	
 	<hr>
-
+<a href="/pr01/js/ng">angularTest</a>
 <script type="text/javascript">
 	$("#joinBt").click(function(){
 

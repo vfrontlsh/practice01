@@ -64,4 +64,9 @@ public class JsController {
 		return mav;
 		
 	}
+	
+	@RequestMapping("/ng")
+	public String ng(){
+		return "/js/angularTest";
+	}
 }

@@ -11,7 +11,14 @@
 
 
 <p>Try to change the names.</p>
+<%-- 
 
+	MVC 
+	
+	ng-controller 
+	ng-model : 객체 역할
+	view : {{}} -> 표현식
+ --%>
 <div ng-app="myApp" ng-controller="myCtrl">
  First Name: <input type="text" ng-model="firstName"><br>
  Last Name: <input type="text" ng-model="lastName"><br>
@@ -22,8 +29,8 @@
 <script>
 	 var app = angular.module('myApp', []);
 	 app.controller('myCtrl', function($scope) {
-	     $scope.firstName= "Dimigo";
-	     $scope.lastName= "Zzang";
+	     $scope.firstName= "joongseo";
+	     $scope.lastName= "dong";
 	 });
 
 </script>

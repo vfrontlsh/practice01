@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+    
+    
+    
+    <mapper namespace="js_mapper">
+    
+    	<select id="idConf" parameterType="String" resultType="jsMemberDTO">
+    		select * from pr01_member where id=#{id}
+    	</select>
+    	
+    	<insert id="join" parameterType="jsMemberDTO">
+    		insert into pr01_member values(#{id}, #{pw}, #{name})
+    	</insert>
+    	
+    	<select id="tryLogin" parameterType="jsMemberDTO" resultType="jsMemberDTO">
+    		select * from pr01_member where id=#{id} and pw=#{pw}
+    	</select>
+    </mapper>
+    
+    

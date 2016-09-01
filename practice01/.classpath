@@ -33,7 +33,11 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="User Library/ojdbc6.jar">
+=======
+	<classpathentry kind="lib" path="user lib/ojdbc6.jar">
+>>>>>>> refs/remotes/origin/master
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>

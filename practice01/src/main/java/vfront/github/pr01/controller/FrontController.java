@@ -34,7 +34,7 @@ public class FrontController {
 			mav.setViewName("forward:/js/");
 			
 		}else if(cmd.equals("jh")){
-			
+			mav.setViewName("/jh/yohanhome");
 		}else if(cmd.equals("dh")){
 			
 			mav.setViewName("forward:/dh/");

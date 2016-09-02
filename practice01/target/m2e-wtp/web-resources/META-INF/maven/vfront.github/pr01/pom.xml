@@ -15,6 +15,24 @@
 	</properties>
 	<dependencies>
 	
+
+	
+<!-- dh: json용 jackson lib 08.29 -->
+	<dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.4.4</version>
+	</dependency>
+	
+<!-- dh: email보내기 연습용 08.29 -->
+<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+<dependency>
+    <groupId>javax.mail</groupId>
+    <artifactId>mail</artifactId>
+    <version>1.4.7</version>
+</dependency>
+
+
 	
 	<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
 <dependency>
@@ -22,6 +40,8 @@
     <artifactId>json-simple</artifactId>
     <version>1.1.1</version>
 </dependency>
+
+
 	
 	
 	<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
@@ -163,7 +183,12 @@
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
 			<scope>test</scope>
-		</dependency>        
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>jquery</artifactId>
+			<version>3.1.0</version>
+		</dependency>
 	</dependencies>
     <build>
         <plugins>

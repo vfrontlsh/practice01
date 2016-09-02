@@ -22,12 +22,12 @@ public class FrontController {
 		ModelAndView mav = new ModelAndView();
 	/*
 	 * 
-	 * 각자 본인 패키지 만드시고 
+	 * 媛곸옄 蹂몄씤 �뙣�궎吏� 留뚮뱶�떆怨� 
 	 * 
-		날라온 본인 이니셜 파라미터 if 절에서 
-		ModelAndView에 
-		본인 controller로 
-		forward 혹은 redirect 하시면 됩니다
+		�궇�씪�삩 蹂몄씤 �씠�땲�뀥 �뙆�씪誘명꽣 if �젅�뿉�꽌 
+		ModelAndView�뿉 
+		蹂몄씤 controller濡� 
+		forward �샊�� redirect �븯�떆硫� �맗�땲�떎
 		
 	*/
 		if(cmd.equals("js")){
@@ -36,6 +36,8 @@ public class FrontController {
 		}else if(cmd.equals("jh")){
 			mav.setViewName("/jh/yohanhome");
 		}else if(cmd.equals("dh")){
+			
+			mav.setViewName("forward:/dh/");
 			
 		}else if(cmd.equals("sy")){
 			

@@ -4,14 +4,14 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
-<<<<<<< HEAD
+<!-- <<<<<<< HEAD -->
 		
 	<!-- dh: jdbc context 등록 08.29 -->
 		<import resource="classpath:context_config/jdbc-context.xml"/>
 	
 	<!-- dh: 파일업로드용 multipart resolver 등록 -->	
 		 <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
-=======
+<!-- ======= -->
 		<import resource="classpath:/config_context/sub-config.xml"/>
->>>>>>> refs/remotes/origin/master
+<!-- >>>>>>> refs/remotes/origin/master -->
 </beans>
